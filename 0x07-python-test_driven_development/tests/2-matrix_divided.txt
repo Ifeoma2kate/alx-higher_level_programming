@@ -1,0 +1,25 @@
+# tests/test_matrix_divided.txt
+
+"""
+Test cases for matrix_divided function.
+"""
+
+# Test case 1: Divide a 2x2 matrix by 2
+>>> matrix_divided([[4, 8], [12, 16]], 2)
+[[2.0, 4.0], [6.0, 8.0]]
+
+# Test case 2: Divide a 3x3 matrix by 3.5
+>>> matrix_divided([[9, 18, 27], [36, 45, 54], [63, 72, 81]], 3.5)
+[[2.57, 5.14, 7.71], [10.29, 12.86, 15.43], [18.0, 20.57, 23.14]]
+
+# Test case 3: Invalid input (matrix containing a string)
+>>> matrix_divided([[4, 8], [12, 'a']], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test case 4: Invalid input (dividing by zero)
+>>> matrix_divided([[4, 8], [12, 16]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
